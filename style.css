@@ -25,18 +25,23 @@
 
 #bookid {
   font-weight: bold;
-  font-size: 15px;
+  font-style: italic;
+  font-size: 35px;
 }
 
 #loadingscreen {
-  position: fixed;
+  font-style: normal;
   text-align: center;
   font-weight: bold;
-  font-size: 60px;
 }
 
 .bookInfo {
   font-size: 30px;
+}
+
+.favBookList {
+  font-style: normal;
+  font-size: 20px;
 }
 
 body {

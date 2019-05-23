@@ -4,7 +4,7 @@ window.onload = function() {
     el: "#root",
 
     data: {
-      message: 'Hello World',
+      message: '',
       loading: true,
       favoriteBookSelected: false,
       haveSearchedBook: false,
@@ -187,8 +187,8 @@ window.onload = function() {
         try {
           const response = await axios.get('https://openlibrary.org/api/books?bibkeys=ISBN:' + this.bookInfo.isbnNum + '&jscmd=details&format=json');
           console.log("Response of ISBN: ", response);
-          console.log("Data is : ", response.data);
-          this.bookInfo.coverImg = response.data.ISBN.thumbnail_url;
+          console.log("Data is : ", response.data.preview_url);
+          //this.bookInfo.coverImg = response.data.ISBN.details.thumbnail_url;
         } catch (error) {
           console.log(error);
         }
@@ -235,7 +235,7 @@ window.onload = function() {
       },
       removeFromFavorites() {
         this.favoriteBookSelected = false;
-      }
+      },
     },
   });
 }
