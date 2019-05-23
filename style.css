@@ -1,0 +1,44 @@
+#welcomeText {
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+}
+
+#subWelcomeText {
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+}
+
+#textboxCenter {
+  text-align: center;
+}
+
+#addToFavoriteButton {
+  background-color: #008CBA;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+#bookid {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#loadingscreen {
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.bookInfo {
+  font-size: 30px;
+}
+
+body {
+  background-color: #A9A9A9;
+}
