@@ -81,12 +81,12 @@ window.onload = function() {
         favorite: false,
       },
       favoriteBooks: [{
-        title: '',
-        author: '',
-        publishDate: '',
-        isbnNum: '',
-        coverImg: '',
-        favorite: true,
+        //title: '',
+        //author: '',
+        //publishDate: '',
+        //isbnNum: '',
+        //coverImg: '',
+        //favorite: true,
       }]
     },
     methods: {
