@@ -24,12 +24,25 @@
       </div>
       <div v-else>
         <p id="bookid" >Below are the search results pertaining to: {{ message }}.</p>
+        <!--
+        <div v-for="book in books">
+          <p> {{book.title}} </p>
+            <ul>
+              <li class="bookInfo" v-bind:src="bookInfo">Book title is {{book.title}}</li>
+              <li class="bookInfo" v-bind:src="bookInfo">Book author is {{book.author}}</li>
+              <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{book.publish_date}}</li>
+              <img src="" alt="book cover" >
+            </ul>
+        </div>
+      -->
+
         <ol>
           <li>
             <ul>
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo.publishDate}}</li>
+              <img v-bind:src="bookInfo.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites1">Add to favorites</button>
@@ -40,6 +53,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_2.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_2.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_2.publishDate}}</li>
+              <img v-bind:src="bookInfo_2.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites2">Add to favorites</button>
@@ -50,6 +64,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_3.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_3.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_3.publishDate}}</li>
+              <img v-bind:src="bookInfo_3.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites3">Add to favorites</button>
@@ -60,6 +75,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_4.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_4.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_4.publishDate}}</li>
+              <img v-bind:src="bookInfo_4.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites4">Add to favorites</button>
@@ -70,6 +86,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_5.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_5.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_5.publishDate}}</li>
+              <img v-bind:src="bookInfo_5.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites5">Add to favorites</button>
@@ -80,6 +97,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_6.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_6.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_6.publishDate}}</li>
+              <img v-bind:src="bookInfo_6.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites6">Add to favorites</button>
@@ -90,6 +108,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_7.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_7.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_7.publishDate}}</li>
+              <img v-bind:src="bookInfo_7.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites7">Add to favorites</button>
@@ -100,6 +119,7 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_8.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_8.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_8.publishDate}}</li>
+              <img v-bind:src="bookInfo_8.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites8">Add to favorites</button>
@@ -110,12 +130,12 @@
               <li class="bookInfo" v-bind:src="bookInfo">Book title is {{bookInfo_9.title}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book author is {{bookInfo_9.author}}</li>
               <li class="bookInfo" v-bind:src="bookInfo">Book publish date is {{bookInfo_9.publishDate}}</li>
+              <img v-bind:src="bookInfo_9.coverImg" alt="book cover" >
             </ul>
           </li>
           <button id="addToFavoriteButton" v-on:click="addToFavorites9">Add to favorites</button>
           <br>
         </ol>
-
       </div>
       <br>
       <h1> These are your favorite books </h1>
@@ -126,6 +146,7 @@
               <li class="favBookList"> Title: {{favBook.title}} </li>
               <li class="favBookList"> Author: {{favBook.author}} </li>
               <li class="favBookList"> Publish Date: {{favBook.publishDate}} </li>
+              <img v-bind:src="favBook.coverImg" alt="book cover" >
           </li>
           <br>
         <ol>
